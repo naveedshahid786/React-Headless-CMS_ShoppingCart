@@ -1,0 +1,17 @@
+import React from 'react';
+const Product = (props) => {
+  return (
+      <div className="col-sm-4 mt-3">
+          <div className="card" style={{width: "22rem"}}>
+            <img src={props.product.image.url} className="card-img-top" alt="shirt"/>
+            <div className="card-body">
+              <h5 className="card-title">{props.product.name}</h5>
+              <p className="card-title">$ {props.product.price}</p>
+              <p className="card-title">{props.product.description}</p>
+              <button className="btn btn-success" onClick={() => props.addItem(props.product)}>Buy Now</button>
+            </div>
+          </div>
+      </div>
+  );
+}
+export default Product;
